@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   var $body = $("body");
+  var $switcher = $("#switcher");
 
   // Fade in body content
   $($body).fadeIn("slow");
@@ -38,16 +39,16 @@ $(document).ready(function(){
   // On keydown move to the direction
   $(document).keydown(function(e){
     if (e.keyCode == 37) {
-      $("#switcher").animate({"margin-left" : "-=20px"}, "fast");
+      $($switcher).animate({"margin-left" : "-=20px"}, "fast");
     }
     else if (e.keyCode == 38) {
-      $("#switcher").animate({"margin-top" : "-=20px"},"fast");
+      $($switcher).animate({"margin-top" : "-=20px"},"fast");
     }
     else if (e.keyCode == 39) {
-      $("#switcher").animate({"margin-left" : "+=20px"},"fast");
+      $($switcher).animate({"margin-left" : "+=20px"},"fast");
     }
     else if (e.keyCode == 40) {
-      $("#switcher").animate({"margin-top" : "+=20px"},"fast");
+      $($switcher).animate({"margin-top" : "+=20px"},"fast");
     }
   });
 
